@@ -24,10 +24,10 @@ graph TD
     B --> C[Deep Learning<br/>DL]
     C --> D[Large Language Models<br/>LLMs]
     
-    style A fill:#e1f5ff
-    style B fill:#b3e5fc
-    style C fill:#81d4fa
-    style D fill:#4fc3f7
+    style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
+    style B fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style C fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style D fill:#93c5fd,stroke:#60a5fa,stroke-width:2px,color:#1e40af
 ```
 
 ## LLM Concepts
@@ -84,10 +84,10 @@ graph TD
     D --> E
     E --> F
     
-    style A fill:#e1f5ff
-    style B fill:#b3e5fc
-    style C fill:#81d4fa
-    style D fill:#4fc3f7
-    style E fill:#29b6f6
-    style F fill:#03a9f4
+    style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
+    style B fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style C fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style D fill:#93c5fd,stroke:#60a5fa,stroke-width:2px,color:#1e40af
+    style E fill:#bfdbfe,stroke:#93c5fd,stroke-width:2px,color:#1e40af
+    style F fill:#dbeafe,stroke:#bfdbfe,stroke-width:2px,color:#1e40af
 ```

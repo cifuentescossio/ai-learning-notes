@@ -16,14 +16,14 @@ graph LR
     A --> G[Self-Consistency]
     A --> H[Prompt Chaining]
     
-    style A fill:#e1f5ff
-    style B fill:#b3e5fc
-    style C fill:#b3e5fc
-    style D fill:#81d4fa
-    style E fill:#81d4fa
-    style F fill:#81d4fa
-    style G fill:#81d4fa
-    style H fill:#81d4fa
+    style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
+    style B fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style C fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style D fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style E fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style F fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style G fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style H fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
 ```
 
 ### Zero-shot Prompting
@@ -59,8 +59,8 @@ graph TD
     F -->|Yes| E
     F -->|No| C
     
-    style C fill:#b3e5fc
-    style E fill:#81d4fa
+    style C fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style E fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
 ```
 
 ### Prompt Shadowing
