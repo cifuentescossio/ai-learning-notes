@@ -65,9 +65,9 @@ Attention is how the model decides which parts of the text are more important wi
 
 ### Chain of Thought 
 
-Chain of Thought is the step-by-step reasoning that an LLM does before giving an answer. This helps to have better results in complex tasks like logical reasoning and math, but it also takes more time and consumes more [[AI-Basics#Tokens|tokens]].
+Chain of Thought is the step-by-step reasoning that an LLM does before giving an answer. This helps to achieve better results in complex tasks like logical reasoning and math, but it also takes more time and consumes more [[AI-Basics#Tokens|tokens]].
 
-Months ago you had to ask the model to do this in the prompt. However, now most models do it by default, with the model controlling how long this chain of thought will take. 
+Months ago you had to explicitly ask the model to show its reasoning process in the prompt. However, now most advanced models do this reasoning internally by default, deciding how much step-by-step thinking is needed for each problem. 
 
 ### LLM Concepts Graph
 
@@ -83,6 +83,27 @@ graph TD
     C --> D
     D --> E
     E --> F
+    
+    style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
+    style B fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style C fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style D fill:#93c5fd,stroke:#60a5fa,stroke-width:2px,color:#1e40af
+    style E fill:#bfdbfe,stroke:#93c5fd,stroke-width:2px,color:#1e40af
+    style F fill:#dbeafe,stroke:#bfdbfe,stroke-width:2px,color:#1e40af
+```
+
+### Retrieval-Augmented Generation (RAG)
+
+RAG is a system architecture for applications based on LLMs that integrates retrieval of external information at inference time. The system retrieves relevant documents or data from an external knowledge base, then provides this information to the LLM along with the user's query. This enables the model to combine the information from the prompt with the information that was retrieved from external sources, allowing it to answer questions about information that wasn't in its training data. RAG is often used together with [[AI-Prompt-Engineering#Grounding|Grounding]] techniques to ensure the model bases its answers on the retrieved information.
+
+```mermaid
+graph LR
+    A[User Query] --> B[Retrieval System]
+    B --> C[External Knowledge Base]
+    C --> D[Retrieved Documents]
+    A --> E[LLM]
+    D --> E
+    E --> F[Generated Response]
     
     style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
     style B fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
