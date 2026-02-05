@@ -56,7 +56,7 @@ The context window is like the "memory" of the LLM. It is the capacity that the 
 
 ### Attention Models
 
-Attention is how the model decides which parts of the text are more important within the [[AI-Basics#Context Window|Context Window]]. Some important aspects for attention are:
+Attention is how the model decides which parts of the text are more important within the [Context Window](AI-Basics.md#context-window). Some important aspects for attention are:
 
 * Semantic Relation
 * Format & Structure of the Text
@@ -65,36 +65,13 @@ Attention is how the model decides which parts of the text are more important wi
 
 ### Chain of Thought 
 
-Chain of Thought is the step-by-step reasoning that an LLM does before giving an answer. This helps to achieve better results in complex tasks like logical reasoning and math, but it also takes more time and consumes more [[AI-Basics#Tokens|tokens]].
+Chain of Thought is the step-by-step reasoning that an LLM does before giving an answer. This helps to achieve better results in complex tasks like logical reasoning and math, but it also takes more time and consumes more [tokens](AI-Basics.md#tokens).
 
 Months ago you had to explicitly ask the model to show its reasoning process in the prompt. However, now most advanced models do this reasoning internally by default, deciding how much step-by-step thinking is needed for each problem. 
 
-### LLM Concepts Graph
-
-```mermaid
-graph TD
-    A[LLM] --> B[Tokens<br/>Input Units]
-    A --> C[Embeddings<br/>Vector Representations]
-    A --> D[Context Window<br/>Memory Capacity]
-    A --> E[Attention<br/>Focus Mechanism]
-    A --> F[Chain of Thought<br/>Step-by-step Reasoning]
-    
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    
-    style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
-    style B fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
-    style C fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style D fill:#93c5fd,stroke:#60a5fa,stroke-width:2px,color:#1e40af
-    style E fill:#bfdbfe,stroke:#93c5fd,stroke-width:2px,color:#1e40af
-    style F fill:#dbeafe,stroke:#bfdbfe,stroke-width:2px,color:#1e40af
-```
-
 ### Retrieval-Augmented Generation (RAG)
 
-RAG is a system architecture for applications based on LLMs that integrates retrieval of external information at inference time. The system retrieves relevant documents or data from an external knowledge base, then provides this information to the LLM along with the user's query. This enables the model to combine the information from the prompt with the information that was retrieved from external sources, allowing it to answer questions about information that wasn't in its training data. RAG is often used together with [[AI-Prompt-Engineering#Grounding|Grounding]] techniques to ensure the model bases its answers on the retrieved information.
+RAG is a system architecture for applications based on LLMs that integrates retrieval of external information at inference time. The system retrieves relevant documents or data from an external knowledge base, then provides this information to the LLM along with the user's query. This enables the model to combine the information from the prompt with the information that was retrieved from external sources, allowing it to answer questions about information that wasn't in its training data. RAG is often used together with [Grounding](AI-Prompt-Engineering.md#grounding) techniques to ensure the model bases its answers on the retrieved information.
 
 ```mermaid
 graph LR

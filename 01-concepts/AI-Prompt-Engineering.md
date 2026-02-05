@@ -8,15 +8,15 @@ There are many different prompt engineering techniques that you can use to achie
 
 ```mermaid
 graph LR
-    A[Prompt Engineering] --> B[Role Prompting]
-    A --> C[Zero-shot]
-    A --> D[Few-shot]
-    A --> E[Prompt Shadowing]
-    A --> F[Prompt Iteration]
-    A --> G[Grounding]
-    A --> H[Self-Consistency]
-    A --> I[Prompt Chaining]
-    A --> J[Meta-Prompting]
+    A[Prompt Engineering<br/>Techniques] --> B[Role Prompting<br/>Technique]
+    A --> C[Zero-shot<br/>Technique]
+    A --> D[Few-shot<br/>Technique]
+    A --> E[Prompt Shadowing<br/>Technique]
+    A --> F[Prompt Iteration<br/>Technique]
+    A --> G[Grounding<br/>Technique]
+    A --> H[Self-Consistency<br/>Technique]
+    A --> I[Prompt Chaining<br/>Technique]
+    A --> J[Meta-Prompting<br/>Technique]
     A --> K[Prompt Injection<br/>Security Risk]
     
     style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
@@ -34,7 +34,7 @@ graph LR
 
 ### Role Prompting
 
-Role prompting is a prompt engineering technique that explicitly instructs an LLM to adopt a specific role, persona, or function in order to condition its style, priorities, and reasoning. Conceptually, this guides the model's internal [[AI-Basics#Embeddings|Embeddings]] toward a different region of its latent space, without changing the model itself.
+Role prompting is a prompt engineering technique that explicitly instructs an LLM to adopt a specific role, persona, or function in order to condition its style, priorities, and reasoning. Conceptually, this guides the model's internal [Embeddings](AI-Basics.md#embeddings) toward a different region of its latent space, without changing the model itself.
 
 **When to use it?** When you need to align the level, focus, and style of the answer with a specific context. Examples:
 
@@ -65,19 +65,6 @@ This is when you give the model one or more examples of the real task in your pr
 * Zero-shot is not reliable
 * Ambiguous Classification (Prioritization of Tickets)
 
-```mermaid
-graph TD
-    A[Task Type] --> B{Model knows<br/>how to do it?}
-    B -->|Yes| C[Zero-shot Prompting<br/>Simple & Fast]
-    B -->|No/Uncertain| D{Task has<br/>specific format?}
-    D -->|Yes| E[Few-shot Prompting<br/>3-7 examples]
-    D -->|No| F{Task is<br/>ambiguous?}
-    F -->|Yes| E
-    F -->|No| C
-    
-    style C fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
-    style E fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
-```
 ### Prompt Iteration/Refinement
 
 It is the most common process that people use when interacting with LLMs. This is the process of improving a prompt in iterations, based on the evaluation and feedback of the output.
@@ -146,29 +133,12 @@ It is the use of an LLM to create, analyze, or improve our prompts. In short, it
 * Creating educational content or teaching materials
 * Fast prototyping
 
-**Bonus:** When you use [[AI-Prompt-Engineering#Prompt Iteration/Refinement|Prompt Iteration]], you can say to the model something like "give me the prompt that I should use from the beginning to have this result" and you can check what you can improve in your prompt.
+**Bonus:** When you use [Prompt Iteration](AI-Prompt-Engineering.md#prompt-iterationrefinement), you can say to the model something like "give me the prompt that I should use from the beginning to have this result" and you can check what you can improve in your prompt.
 
 ### Prompt Shadowing
 
-It is the technique that you use intentionally to override an earlier instruction by providing a new instruction later. Due to how the [[AI-Basics#Context Window|Context Window]] works, more recent instructions can override earlier ones. For example, you start by telling the model to answer something in JSON, but at the end in another prompt you say to answer in YAML, effectively replacing the JSON instruction.
+It is the technique that you use intentionally to override an earlier instruction by providing a new instruction later. Due to how the [Context Window](AI-Basics.md#context-window) works, more recent instructions can override earlier ones. For example, you start by telling the model to answer something in JSON, but at the end in another prompt you say to answer in YAML, effectively replacing the JSON instruction.
 
 ### Prompt Injection
 
-Actually, prompt injection is not a technique—it is a security vulnerability in LLM systems where a non-trusted prompt manages to alter the output. For example, if you have an automation that answers emails automatically or reads documents, those emails or documents might contain hidden instructions that trick the system into sending information to a specific user, leaking credentials, or exposing personal information. This vulnerability could be worse if your LLM uses a [[AI-Basics#Retrieval-Augmented Generation (RAG)|RAG]] architecture, because malicious content could be injected into the knowledge base and then retrieved.
-
-```mermaid
-graph TD
-    A[User Input] --> B{Contains<br/>Malicious<br/>Instructions?}
-    B -->|Yes| C[Prompt Injection]
-    B -->|No| D[Normal Processing]
-    C --> E[Altered Output]
-    C --> F[Data Leakage]
-    C --> G[Unauthorized Actions]
-    
-    style A fill:#2563eb,stroke:#1e40af,stroke-width:2px,color:#fff
-    style C fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff
-    style E fill:#f87171,stroke:#ef4444,stroke-width:2px,color:#fff
-    style F fill:#f87171,stroke:#ef4444,stroke-width:2px,color:#fff
-    style G fill:#f87171,stroke:#ef4444,stroke-width:2px,color:#fff
-    style D fill:#60a5fa,stroke:#3b82f6,stroke-width:2px,color:#fff
-```
+Actually, prompt injection is not a technique—it is a security vulnerability in LLM systems where a non-trusted prompt manages to alter the output. For example, if you have an automation that answers emails automatically or reads documents, those emails or documents might contain hidden instructions that trick the system into sending information to a specific user, leaking credentials, or exposing personal information. This vulnerability could be worse if your LLM uses a [RAG](AI-Basics.md#retrieval-augmented-generation-rag) architecture, because malicious content could be injected into the knowledge base and then retrieved.
