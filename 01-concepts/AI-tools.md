@@ -111,4 +111,8 @@ A curated collection of useful AI tools and resources.
 
 ---
 
-Suno.com
+## Music Generation
+
+### [Suno](https://suno.com)
+**Category:** Music Generation
+**Description:** AI-powered music generation platform that creates full songs with vocals, instruments, and lyrics from text prompts.

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/danielcifuentes/Documents/code/daniel/ai-learning-notes status)",
+      "Bash(git -C /Users/danielcifuentes/Documents/code/daniel/ai-learning-notes diff 01-concepts/AI-tools.md)",
+      "Bash(git -C /Users/danielcifuentes/Documents/code/daniel/ai-learning-notes log --oneline -5)"
+    ]
+  }
+}
