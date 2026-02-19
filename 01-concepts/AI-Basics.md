@@ -89,3 +89,10 @@ graph LR
     style E fill:#bfdbfe,stroke:#93c5fd,stroke-width:2px,color:#1e40af
     style F fill:#dbeafe,stroke:#bfdbfe,stroke-width:2px,color:#1e40af
 ```
+### Temperature
+
+Temperature is a parameter that controls how "creative" or random the LLM's outputs are. With a low temperature value (closer to 0), the model produces more consistent and deterministic outputs, but it loses creativity. With a high temperature value (closer to 1 or higher), the model becomes more creative and produces more varied outputs, but the results may be less consistent or predictable.
+
+### Top P
+
+When an LLM predicts the next token in a sequence, it considers many possible options, each with a probability. Top P (also called nucleus sampling) is a parameter that sets a probability threshold. Instead of choosing from a fixed number of top tokens, Top P selects tokens whose cumulative probability reaches the specified threshold. For example, if Top P is set to 0.9, the model will consider tokens until their combined probabilities reach 90% of the probability distribution. This allows the model to dynamically adjust how many options it considers based on the probability distribution, rather than always using a fixed number of top choices.

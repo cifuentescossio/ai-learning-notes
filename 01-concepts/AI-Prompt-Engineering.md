@@ -142,3 +142,35 @@ It is the technique that you use intentionally to override an earlier instructio
 ### Prompt Injection
 
 Actually, prompt injection is not a technique—it is a security vulnerability in LLM systems where a non-trusted prompt manages to alter the output. For example, if you have an automation that answers emails automatically or reads documents, those emails or documents might contain hidden instructions that trick the system into sending information to a specific user, leaking credentials, or exposing personal information. This vulnerability could be worse if your LLM uses a [RAG](AI-Basics.md#retrieval-augmented-generation-rag) architecture, because malicious content could be injected into the knowledge base and then retrieved.
+
+## Prompting Images
+
+When creating images with AI, it is crucial to be highly descriptive, imagine you're describing an image to someone over a phone call who cannot see it. To create effective image prompts, focus on three main aspects:
+
+1. **Main Character/Subject**: Describe the main subject with specific characteristics (appearance, age, expression, pose, etc.).
+2. **Visual Style**: Define the artistic style, color palette, lighting, filters, textures, and other stylistic elements.
+3. **Composition**: Specify the arrangement of objects, camera angle, perspective, framing, background elements, and overall scene layout.
+
+**Example:**
+
+Instead of: *"A person in a city"*
+
+Use: *"A young woman in her late 20s with short auburn hair, wearing a vintage brown leather jacket and dark jeans, standing confidently with hands in pockets, smiling warmly. Cinematic film noir style with high contrast black and white tones, dramatic shadows from neon signs, moody blue and purple street lighting. Wide-angle shot from a low angle, the subject positioned on the left third of the frame, blurred city traffic and neon signs in the background, shallow depth of field, urban street at night with rain-soaked pavement reflecting the neon lights."*
+
+This example combines:
+- **Main Character**: Young woman, late 20s, auburn hair, specific clothing, confident pose, warm smile
+- **Visual Style**: Film noir, high contrast, black and white with blue/purple accents, dramatic shadows, neon lighting
+- **Composition**: Wide-angle, low angle, rule of thirds positioning, shallow depth of field, rain-soaked pavement, blurred background
+
+## Prompt Evaluation
+
+When we need to use a prompt repeatedly (for automation or production systems), it is important to evaluate it thoroughly to ensure reliability and consistency. Here are key aspects to evaluate:
+
+1. **Consistency**: Test the prompt with many different inputs (at least 10-20 varied examples) to verify that it produces reliable outputs across different use cases and edge cases.
+2. **Precision**: Measure how accurately the output matches the intended result. This is critical for reports and data extraction tasks, but may be less important for creative tasks where variation is acceptable.
+3. **Relevance**: Verify that the model's output stays on-topic and addresses the specific task or question without including irrelevant information or going off on tangents.
+4. **Clarity**: Ensure the output is clear, well-structured, and follows the specified format, language, and style requirements (character limits, output format, tone, etc.).
+
+### Cross Validation
+
+Cross validation is a technique where we use multiple LLMs to validate outputs. We perform the task in one model and then use another model to verify or evaluate the result. This approach helps reduce human workload in quality assurance, mitigates the risk of relying on a single model's biases or limitations, and can help detect hallucinations by comparing outputs across different models.
