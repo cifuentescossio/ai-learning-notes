@@ -38,8 +38,12 @@ A curated collection of useful AI tools and resources.
 **Description:** AI-powered code editor that understands your codebase and helps with refactoring, debugging, and feature development.
 
 ### [Windsurf](https://codeium.com/windsurf)
-**Category:** Code Editor  
+**Category:** Code Editor
 **Description:** AI-native code editor built on VS Code that provides intelligent code completion, chat, and code generation using advanced language models.
+
+### [Claude Code](https://github.com/anthropics/claude-code)
+**Category:** Code Assistant
+**Description:** Official CLI tool from Anthropic that brings Claude AI directly to your terminal for coding assistance, file editing, and development tasks.
 
 ### [v0](https://v0.dev)
 **Category:** Code Assistant  
@@ -78,8 +82,12 @@ A curated collection of useful AI tools and resources.
 **Description:** AI voice generator and text-to-speech platform with natural-sounding voices and voice cloning capabilities.
 
 ### [HeyGen](https://www.heygen.com)
-**Category:** Video Generation  
+**Category:** Video Generation
 **Description:** AI-powered platform for creating realistic talking avatar videos with lip-sync, perfect for presentations, marketing, and personalized video content.
+
+### [Whisper](https://openai.com/research/whisper)
+**Category:** Audio Transcription
+**Description:** OpenAI's automatic speech recognition system that transcribes audio to text with high accuracy across multiple languages, available as open-source or via API.
 
 ---
 
@@ -116,3 +124,15 @@ A curated collection of useful AI tools and resources.
 ### [Suno](https://suno.com)
 **Category:** Music Generation
 **Description:** AI-powered music generation platform that creates full songs with vocals, instruments, and lyrics from text prompts.
+
+---
+
+## AI Platforms & Services
+
+### [Hugging Face](https://huggingface.co)
+**Category:** ML Platform
+**Description:** Open-source platform hosting thousands of pre-trained AI models, datasets, and ML tools. Hub for the AI community to collaborate and deploy models.
+
+### [AWS Bedrock](https://aws.amazon.com/bedrock)
+**Category:** Cloud AI Service
+**Description:** Amazon's fully managed service providing access to foundation models from leading AI companies through a unified API, with enterprise-grade security and privacy.
