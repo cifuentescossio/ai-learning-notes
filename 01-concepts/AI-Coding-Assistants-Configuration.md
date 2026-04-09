@@ -194,3 +194,7 @@ For example, you could set up a hook that automatically runs a linter every time
 | **Skills** | `SKILL.md` files | `.claude/skills/` | `.windsurf/skills/` |
 | **Modes** | Agent, Ask, Plan, Debug | Default, Plan | Code, Chat, Plan |
 | **Hooks** | `.cursor/hooks.json` | `.claude/settings.json` | `.windsurf/hooks.json` |
+
+Static vs dinamic
+Agents vs skills en cursor y claude
+difference between a command and a skill
